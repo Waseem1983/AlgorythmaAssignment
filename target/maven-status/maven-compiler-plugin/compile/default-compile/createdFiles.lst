@@ -1,7 +1,0 @@
-com/algorythma/friendsshipment/file/csv/FriendsCSVNetworkBuilder.class
-com/algorythma/friendsshipment/beans/ShipmentDetails.class
-com/algorythma/friendsshipment/algorithm/FriendsShipmentEvaluator.class
-com/algorythma/friendsshipment/algorithm/FriendsNetwork.class
-com/algorythma/friendsshipment/algorithm/Friend.class
-com/algorythma/friendsshipment/file/csv/CSVFileReader.class
-com/algorythma/friendsshipment/ShipmentCostCalculator.class
