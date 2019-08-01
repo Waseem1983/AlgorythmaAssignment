@@ -1,7 +1,14 @@
-package com.algorithma.friendsshipment.beans;
+package com.algorythma.friendsshipment.beans;
 
-import com.algorithma.friendsshipment.algorithm.Friend;
+import com.algorythma.friendsshipment.algorithm.Friend;
 
+
+/**
+ * @author waseem
+ * This class represent a single Test case provided in the CSV file.
+ * each CSV record is analyzed to the corresponding fields below, please also note
+ * that always source Friend is equal to 'ME'.
+ */
 public class ShipmentDetails {
 		
 	private Friend sourceFriend;
@@ -11,6 +18,14 @@ public class ShipmentDetails {
 	private double height;
 	private double length;
 	private double cost;
+	private String testCaseText;
+	
+	public String getTestCaseText() {
+		return testCaseText;
+	}
+	public void setTestCaseText(String testCaseText) {
+		this.testCaseText = testCaseText;
+	}
 	public Friend getSourceFriend() {
 		return sourceFriend;
 	}
@@ -51,9 +66,9 @@ public class ShipmentDetails {
 	public double getCost() {
 		return cost;
 	}
+	
 	public void setCost(double cost) {
 		this.cost = cost;
-	}
-	
+	}	
 	
 }

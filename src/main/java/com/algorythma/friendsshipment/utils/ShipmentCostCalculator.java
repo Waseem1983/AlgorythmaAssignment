@@ -1,13 +1,29 @@
-package com.algorithma.friendsshipment;
+package com.algorythma.friendsshipment.utils;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-import com.algorithma.friendsshipment.algorithm.Friend;
-import com.algorithma.friendsshipment.beans.ShipmentDetails;
+import com.algorythma.friendsshipment.algorithm.Friend;
+import com.algorythma.friendsshipment.beans.ShipmentDetails;
 
+
+/**
+ * @author waseem
+ * We calculate the cost following the formula provided in the readme file, initially we calculate the Normalized Volume Weight
+ * second we multiply it by SQRT(Hard).
+ *
+ */
 public class ShipmentCostCalculator {
 
+	/**
+	 * 
+	 * @param shipment
+	 * @param destinationFriend
+	 * @return shipmentCost
+	 * 
+	 * following the cost equation provided in the readme.txt file
+	 * shipment cost = normalizedWeight x SQRT(Hard)
+	 */
 	public static double calculateShipmentCost(ShipmentDetails shipment, Friend destinationFriend) {
 
 		int hardness = destinationFriend.getHardness();
@@ -17,9 +33,9 @@ public class ShipmentCostCalculator {
 
 		double normalizedWeight = calculateNormalizedWeight(width, height, length);
 		double shippingCost = Math.sqrt(hardness) * normalizedWeight;
-
+		System.out.println("Test Case:"+shipment.getTestCaseText());
 		shippingCost = Math.round(shippingCost * 100.0) / 100.0;
-		System.out.println("((w:" + width + "xh:" + height + "xl:" + length + ")/5000) x SQRT(" + hardness + ") = "
+		System.out.println("Calculated Cost :((w:" + width + "xh:" + height + "xl:" + length + ")/5000) x SQRT(" + hardness + ") = "
 				+ shippingCost);
 		
 		System.out.println("Provided Cost:"+shipment.getCost());
@@ -27,6 +43,17 @@ public class ShipmentCostCalculator {
 
 	}
 
+	/**
+	 * 
+	 * @param width
+	 * @param height
+	 * @param length
+	 * @return normalizedWeight
+	 * 
+	 * normalizedWeight = (width * height * length) / 5000
+	 * rounded to the next .5 Volume K
+	 * 
+	 */
 	private static double calculateNormalizedWeight(double width, double height, double length) {
 		double normalizedWeight = (width * height * length) / 5000;
 

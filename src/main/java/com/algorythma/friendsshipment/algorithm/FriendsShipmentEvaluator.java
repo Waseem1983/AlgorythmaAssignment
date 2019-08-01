@@ -1,18 +1,29 @@
-package com.algorithma.friendsshipment.algorithm;
+package com.algorythma.friendsshipment.algorithm;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-public class FriendsShipmentHardnessEvaluator {
+
+/**
+ * @author waseem
+ * 
+ * This is the core engine of the app, since we are dealing with a Weighted Graph,
+ * then the best way to get the least costly path is to run Djikastra algorithm, 
+ * Multiple sources reviewed before coming with this implementation, mainly the Book "Data Structures and Algorithms Analysis in Java"
+ * https://www.geeksforgeeks.org/java-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/
+ * https://www.baeldung.com/java-dijkstra
+ *  
+ */
+public class FriendsShipmentEvaluator {
 
     public FriendsNetwork evaluateClosestFriendFrom(FriendsNetwork friendsNetwork, Friend firstFriend) {
 
         firstFriend.setHardness(0);
 
-        Set<Friend> evaluatedFriends = new HashSet();
-        Set<Friend> unevaluatedFriends = new HashSet();
+        Set<Friend> evaluatedFriends = new HashSet<>();
+        Set<Friend> unevaluatedFriends = new HashSet<>();
         unevaluatedFriends.add(firstFriend);
 
         while (unevaluatedFriends.size() != 0) {
@@ -36,7 +47,7 @@ public class FriendsShipmentHardnessEvaluator {
         Integer currentFriendHardness = currentFriend.getHardness();
         if (currentFriendHardness + evaluationFriendHardness < evaluationFriend.getHardness()) {
             evaluationFriend.setHardness(currentFriendHardness + evaluationFriendHardness);
-            LinkedList<Friend> shipmentPath = new LinkedList(currentFriend.getFriendsShipmentPath());
+            LinkedList<Friend> shipmentPath = new LinkedList<>(currentFriend.getFriendsShipmentPath());
             shipmentPath.add(currentFriend);
             evaluationFriend.setFriendsShipmentPath(shipmentPath);
         }

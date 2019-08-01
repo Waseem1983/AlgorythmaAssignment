@@ -1,5 +1,7 @@
-/home/waseem/devroot/training/Spring5Training/examfrindsshipment/src/main/java/com/algorithma/friendsshipment/algorithm/FriendsShipmentHardnessEvaluator.java
-/home/waseem/devroot/training/Spring5Training/examfrindsshipment/src/main/java/com/algorithma/friendsshipment/file/csv/CsvParser.java
-/home/waseem/devroot/training/Spring5Training/examfrindsshipment/src/main/java/com/algorithma/friendsshipment/algorithm/FriendsNetwork.java
-/home/waseem/devroot/training/Spring5Training/examfrindsshipment/src/main/java/com/algorithma/friendsshipment/algorithm/Friend.java
-/home/waseem/devroot/training/Spring5Training/examfrindsshipment/src/main/java/com/algorithma/friendsshipment/beans/ShipmentDetails.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/beans/ShipmentDetails.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/ShipmentCostCalculator.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/algorithm/FriendsShipmentEvaluator.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/file/csv/FriendsCSVNetworkBuilder.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/algorithm/FriendsNetwork.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/file/csv/CSVFileReader.java
+/home/waseem/devroot/assignments/AlgorythmaAssignment/src/main/java/com/algorythma/friendsshipment/algorithm/Friend.java

@@ -1,10 +1,19 @@
-package com.algorithma.friendsshipment.algorithm;
+package com.algorythma.friendsshipment.algorithm;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * @author waseem
+ *
+ * Represent a Friend in the FriendsNetwork graph, and it maintains a hashmap of direct friends in the graph along with there ranks(Hard rank),
+ * the frindsShipmentPath represent the optimal delivery path from the source of the deliver to this Friend.
+ * hardness value change frequently based on the source of the search and the differnt hops weights in between the source and destination. 
+ * 
+ */
 public class Friend {
 
 	private String name;

@@ -1,11 +1,17 @@
-package com.algorithma.friendsshipment.algorithm;
+package com.algorythma.friendsshipment.algorithm;
 
 import java.util.HashSet;
 import java.util.Set;
 
+
+/**
+ * @author waseem
+ * HashSet wrapper class, simply to represent the Friends in a network, 
+ * mainly used to avoid having duplicated during the Evaluation phase.
+ */
 public class FriendsNetwork {
 
-	private Set<Friend> friends = new HashSet();
+	private Set<Friend> friends = new HashSet<>();
 
 	public void addFriend(Friend friend) {
 		friends.add(friend);
